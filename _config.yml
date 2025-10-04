@@ -6,7 +6,7 @@ email: jrobles@e-consutptrds.net
 
 # URL settings (required for GitHub Pages)
 url: "https://jroblesruiz.github.io"
-baseurl: "/JRR-Page" # nombre del repositorio
+baseurl: "" # nombre del repositorio
 
 # Build settings
 markdown: kramdown
