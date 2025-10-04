@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<article class="journal-entry">
+    <header>
+        <h1>{{ page.title }}</h1>
+        <p class="date">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        </p>
+    </header>
+
+    <div class="journal-content">
+        {{ content }}
+    </div>
+
+    {% if page.highlights %}
+    <section class="highlights">
+        <h3>Today's Highlights:</h3>
+        <ul>
+        {% for highlight in page.highlights %}
+            <li>{{ highlight }}</li>
+        {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if page.challenges %}
+    <section class="challenges">
+        <h3>Challenges Faced:</h3>
+        <ul>
+        {% for challenge in page.challenges %}
+            <li>{{ challenge }}</li>
+        {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if page.lessons_learned %}
+    <section class="lessons">
+        <h3>Lessons Learned:</h3>
+        <ul>
+        {% for lesson in page.lessons_learned %}
+            <li>{{ lesson }}</li>
+        {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if page.tomorrow_goals %}
+    <section class="tomorrow">
+        <h3>Goals for Tomorrow:</h3>
+        <ul>
+        {% for goal in page.tomorrow_goals %}
+            <li>{{ goal }}</li>
+        {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+</article>
+
+<nav class="post-navigation">
+    {% if page.previous.url %}
+    <a href="{{ page.previous.url }}" class="prev">&larr; Previous Entry</a>
+    {% endif %}
+    {% if page.next.url %}
+    <a href="{{ page.next.url }}" class="next">Next Entry &rarr;</a>
+    {% endif %}
+</nav>
