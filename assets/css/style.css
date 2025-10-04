@@ -1,0 +1,342 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+header ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #3498db;
+}
+
+/* Main Content */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Post Styles */
+.post-preview, .gratitude-preview, .journal-preview {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.post-preview:last-child,
+.gratitude-preview:last-child,
+.journal-preview:last-child {
+    border-bottom: none;
+}
+
+.post-preview h2,
+.gratitude-preview h3,
+.journal-preview h3 {
+    margin-top: 0;
+}
+
+.meta, .date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.excerpt {
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.read-more {
+    color: #3498db;
+    font-weight: 500;
+}
+
+/* Article Styles */
+.post, .gratitude-entry, .journal-entry {
+    margin-bottom: 2rem;
+}
+
+.post header,
+.gratitude-entry header,
+.journal-entry header {
+    margin-bottom: 2rem;
+}
+
+.post header h1,
+.gratitude-entry header h1,
+.journal-entry header h1 {
+    margin-top: 0;
+}
+
+.content, .gratitude-content, .journal-content {
+    margin-bottom: 2rem;
+}
+
+/* Gratitude Specific Styles */
+.gratitude-list {
+    background-color: #fffbea;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #f39c12;
+    margin: 2rem 0;
+}
+
+.gratitude-list h3 {
+    margin-top: 0;
+    color: #f39c12;
+}
+
+.gratitude-list ul {
+    margin-left: 1.5rem;
+}
+
+.gratitude-list li {
+    margin-bottom: 0.5rem;
+}
+
+.mood {
+    display: inline-block;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+
+/* Journal Specific Styles */
+.highlights, .challenges, .lessons, .tomorrow {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.highlights {
+    border-left: 4px solid #27ae60;
+}
+
+.highlights h3 {
+    color: #27ae60;
+    margin-top: 0;
+}
+
+.challenges {
+    border-left: 4px solid #e74c3c;
+}
+
+.challenges h3 {
+    color: #e74c3c;
+    margin-top: 0;
+}
+
+.lessons {
+    border-left: 4px solid #3498db;
+}
+
+.lessons h3 {
+    color: #3498db;
+    margin-top: 0;
+}
+
+.tomorrow {
+    border-left: 4px solid #9b59b6;
+}
+
+.tomorrow h3 {
+    color: #9b59b6;
+    margin-top: 0;
+}
+
+.highlights ul, .challenges ul, .lessons ul, .tomorrow ul {
+    margin-left: 1.5rem;
+}
+
+.highlights li, .challenges li, .lessons li, .tomorrow li {
+    margin-bottom: 0.5rem;
+}
+
+/* Tags */
+.tags {
+    margin-top: 2rem;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    padding: 0.25rem 0.75rem;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Post Navigation */
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ecf0f1;
+}
+
+.post-navigation a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.post-navigation a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #7f8c8d;
+    background-color: #ecf0f1;
+    margin-top: 3rem;
+}
+
+/* Code Blocks */
+pre {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+code {
+    background-color: #ecf0f1;
+    color: #e74c3c;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: "Courier New", monospace;
+}
+
+pre code {
+    background-color: transparent;
+    color: #ecf0f1;
+    padding: 0;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    header nav {
+        padding: 0 1rem;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .post-navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

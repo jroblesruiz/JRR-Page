@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<article class="gratitude-entry">
+    <header>
+        <h1>{{ page.title }}</h1>
+        <p class="date">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        </p>
+    </header>
+
+    <div class="gratitude-content">
+        {{ content }}
+    </div>
+
+    {% if page.grateful_for %}
+    <section class="gratitude-list">
+        <h3>Today I'm grateful for:</h3>
+        <ul>
+        {% for item in page.grateful_for %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if page.mood %}
+    <div class="mood">
+        <strong>Mood:</strong> {{ page.mood }}
+    </div>
+    {% endif %}
+</article>
+
+<nav class="post-navigation">
+    {% if page.previous.url %}
+    <a href="{{ page.previous.url }}" class="prev">&larr; Previous Entry</a>
+    {% endif %}
+    {% if page.next.url %}
+    <a href="{{ page.next.url }}" class="next">Next Entry &rarr;</a>
+    {% endif %}
+</nav>
